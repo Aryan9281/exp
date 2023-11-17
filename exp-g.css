@@ -1,0 +1,22 @@
+body{ 
+	background-color:purple;
+
+}
+
+#gang{
+	background-color: yellow;
+	color:blue;
+	font-size:20px;
+}
+
+.bang{
+	background-color:blue;
+	color:yellow;
+	font-size:30px;
+}
+
+dev p{
+	background-color:orange;
+	color:white;
+	font-size:30px;
+}

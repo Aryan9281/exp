@@ -1,0 +1,75 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+         <!--
+            function WriteCookie() {
+               if( document.myform.firstname.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue1 = escape(document.myform.firstname.value) + ";";
+               document.cookie = "name=" + cookievalue1;
+               document.write ("Setting Cookies : " + "name=" + cookievalue1 );
+	       cookievalue2 = escape(document.myform.lastname.value) + ";";
+               document.cookie = "name=" + cookievalue2;
+               document.write ("Setting Cookies : " + "name=" + cookievalue2 );
+            }
+	    function getConfirmation() {
+	        if( document.myform.firstname.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+		}
+               var retVal = confirm("Are you sure you want to proceed?");
+               if( retVal == true ) {
+                  document.write ("SAVED SUCCESSFULLY");
+                  return true;
+               } 
+            }
+	    function getConfirmation2() {
+		if( document.myform.firstname.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+		}
+               var retVal = confirm("Are you sure you want to cancel?");
+               if( retVal == true ) {
+                  document.write ("!CANCELLED SUCCESSFULLY!");
+                  return true;
+               } 
+            }
+         //-->
+      </script>      
+   </head>
+   
+   <body>
+	<center>
+	<h1>REGISTRATION FORM</h1>      
+	<form name = "myform" action = "">
+		<table>
+		<tr>
+        	<td>FIRST NAME :</td> <td><input type = "text" name = "firstname"/></td></tr>
+		
+		<tr>
+        	<td>LAST NAME :</td> <td><input type = "text" name = "lastname"/></td></tr>
+		
+		<tr>
+		<td>AGE : </td><td><input type = "text" name = "age"/></td></tr>
+		
+		<tr>
+		<td>E-MAIL : </td><td><input type = "text" name = "email"/></td></tr>
+		
+		<tr>
+		<td>SET PASSWORD : </td><td><input type = "password" name = "password"/></td></tr>
+		
+		<tr>	
+		<td>CONFIRM PASSWORD : </td><td><input type = "password" name = "password"/></td></tr>
+		
+		</table>
+		<br></br>
+		<input type = "button" value = "CONFIRM" onclick = "getConfirmation();" />
+         	<input type = "button" value = "CANCEL" onclick = "getConfirmation2();" />
+		<br></br>
+         	<input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
+	</form>
+	  
+   </body>
+</html>
